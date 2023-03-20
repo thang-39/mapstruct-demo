@@ -6,6 +6,8 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -18,5 +20,8 @@ public class Product {
     private String desc;
     private int quantity;
     private long price;
+    private String itemId;
+
+    private List<Item> items;
 
 }

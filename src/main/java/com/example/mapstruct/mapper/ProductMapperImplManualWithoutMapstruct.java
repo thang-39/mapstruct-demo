@@ -3,8 +3,8 @@ package com.example.mapstruct.mapper;
 import com.example.mapstruct.dto.ProductDto;
 import com.example.mapstruct.entity.Product;
 
-public class ProductMapperImpl implements ProductMapper{
-    @Override
+public class ProductMapperImplManualWithoutMapstruct /*implements ProductMapper*/{
+//    @Override
     public ProductDto modelToDto(Product product) {
         ProductDto productDto = new ProductDto();
         productDto.setId(product.getId());
@@ -14,7 +14,7 @@ public class ProductMapperImpl implements ProductMapper{
         return productDto;
     }
 
-    @Override
+//    @Override
     public Product dtoToModel(ProductDto productDto) {
         Product product = new Product();
         product.setId(productDto.getId());
